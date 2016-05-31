@@ -219,6 +219,7 @@ footer {
 
 
 .middle-menu {
+  position: relative;
   padding-top: px;
   padding-bottom: 44px;
 }
@@ -264,12 +265,16 @@ footer {
   width: 300px;
   margin-top: 60px;
 }
+.midle-menu-user_hide {
+  display: none;
+}
+.midle-menu-user_show {
+  animation: bounce 1s;
+}
 .middle-menu-user a {
-  padding: 10px 20px;
   font-size: 21px;
   line-height: 18px;
   color: #000000;
-  background: #ffffff;
   text-decoration: none;
 }
 .middle-menu-user i {
@@ -278,10 +283,14 @@ footer {
 }
 .menu-user__login {
   display: inline-block;
+  padding: 10px 20px;
+  background: #ffffff;
 }
 .menu-user__registration {
   display: inline-block;
   margin-left: 10px;
+  padding: 10px 20px;
+  background: #ffffff;
 }
 .middle-menu-user a:hover {
   color: #ee3643;
@@ -296,6 +305,100 @@ footer {
 .middle-menu-user a:active i {
   opacity: 0.3;
 }
+
+
+
+
+/*User login*/
+
+
+
+
+.middle-menu-user-on {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 60px;
+  width: 300px;
+}
+@keyframes bounce {
+  0%   { transform: translateY(-2000px);}
+  70%  { transform: translateY(30px);   }
+  90%  { transform: translateY(-10px);  }
+  100% { transform: translateY(0px);    }
+}
+.middle-menu-user-on_show {
+  display: block;
+  animation: bounce 1s;
+}
+.menu-user-on__name {
+  padding: 7px 0px;
+  background: #fff;
+}
+.menu-user-on__name a {
+  margin-left: 10px;
+  font-size: 21px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+.menu-user-on__name a:hover i {
+  color: #32425c;
+}
+.menu-user-on__name a:active i {
+  opacity: .3;
+}
+.menu-user-on__name a:active  {
+  opacity: .3;
+}
+.menu-user-on__name i {
+  margin-right: 5px;
+  font-size: 18px;
+  color: #c5c5c5;
+}
+.menu-user-on__name > .icon-login {
+  margin-left: 35px;
+  margin-right: 0px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.menu-user-on__name > .icon-login:hover {
+  color: #32425c;
+}
+.menu-user-on__name > .icon-login:active {
+  opacity: .3;
+}
+.middle-menu-user-on > a {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #32425c;
+}
+.middle-menu-user-on > a:hover {
+  color: #ee3643;
+}
+.middle-menu-user-on > a:active {
+  color: #32425c;
+  opacity: .3;
+}
+.middle-menu-user-on > a:nth-child(3) {
+  margin-left: 25px;
+}
+.middle-menu-user-on:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 55px;
+  left: 107px;
+  width: 4px;
+  height: 3px;
+  background: #32425c;
+  border-radius: 50%;
+}
+
+
+
 .bottom-menu {
   width: 100%;
   min-height: 55px;
