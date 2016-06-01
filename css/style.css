@@ -399,6 +399,12 @@ footer {
 
 
 
+
+/*Bottom-menu*/
+
+
+
+
 .bottom-menu {
   width: 100%;
   min-height: 55px;
@@ -637,6 +643,7 @@ footer {
   margin-left: 390px;
 }
 .pop-item-block {
+  position: relative;
   float: left;
   width: 218px;
   margin-left: 20px;
@@ -644,6 +651,88 @@ footer {
   text-align: center;
   border: 1px solid #e5e5e5;
 }
+.pop-item-block:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+  transition: 0.3s;
+}
+.pop-item-block:hover .pop-item-block-hover {
+  visibility: visible;
+  opacity: 1;
+  transition-delay:0s;
+}
+
+
+
+
+/*Hover on the item block*/
+
+
+
+
+.pop-item-block-hover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 218px;
+  padding-top: 60px;
+  text-align: center;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0; 
+  transition:visibility 0s linear 0.3s ,opacity .3s linear;
+}
+.pop-item-block-hover a {
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.pop-item-block-hover i {
+  margin-right: 10px;
+  font-size: 18px;
+  opacity: .3;
+}
+.pop-item-block-hover a:first-child {
+  padding: 10px 28px;
+  color: #fff;
+  background: #63a63e;
+  box-shadow: inset 0 -3px 0 #367315;
+  border-radius: 5px;
+}
+.pop-item-block-hover a:first-child:hover {
+  background: #5fbb2d;
+}
+.pop-item-block-hover a:first-child:hover i {
+  opacity: 1;
+}
+.pop-item-block-hover a:first-child:active {
+  background: #518534;
+  box-shadow: none;
+}
+.pop-item-block-hover a:last-child {
+  margin-top: 15px;
+  color: #32425c;
+  border: 3px solid #63a63e;
+  border-radius: 5px;
+}
+.pop-item-block-hover a:last-child:hover {
+  border: 3px solid #32425c;
+}
+.pop-item-block-hover a:last-child:active {
+  opacity: 0.3;
+}
+
+
+
+
+/*//////////////////*/
+
+
+
+
+
 .pop-item-block:first-child {
   margin-left: 0px;
 }
@@ -788,10 +877,16 @@ footer {
   border-top: 1px solid #405069;
   cursor: pointer;
 }
+.service-slider__point:hover {
+  background: #293449;
+}
 .service-slider__point_active {
   background: #fff;
   color: #32425c;
   border: none;
+}
+.service-slider__point_active:hover {
+  background: #fff;
 }
 .service-slider-description {
   float: left;
